@@ -9,12 +9,13 @@ app.use(cookieParser());
 app.use(logger('dev'))
 
 app.use((req, res, next)=>{
-    var username = req.cookies.username;
-    if(username){
-        console.log(username)
-    }
+    console.log(req.cookies)
+    next();
+})
+
+app.use((req, res, next)=>{
     res.cookie('username', 'Deepak');
-    next()
+    next();
 })
 
 app.get('/about', (req, res)=>{
