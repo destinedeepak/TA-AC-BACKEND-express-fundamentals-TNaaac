@@ -2,12 +2,16 @@ const express = require('express');
 
 var app = express();
 
-app.use('/about', (req, res, next) => {
+app.use('/admin', (req, res, next) => {
     next("unauthorized page")
 })
 
 app.get('/', (req,res) => {
     res.send('Welcome');
+})
+
+app.use('/about', (req, res, next) => {
+    res.send('About Page')
 })
 
 app.use((req, res, next) => {
