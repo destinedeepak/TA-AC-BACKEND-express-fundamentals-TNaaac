@@ -13,7 +13,7 @@ Q. Create a package.json with using npm init script with above content
 
 Q. Create a basic express server with 2 routes
 
-- add package.json
+- add package.jso
 - install express
 - setup an express server
 - add a listener on port 3000
